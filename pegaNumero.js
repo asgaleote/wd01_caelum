@@ -1,5 +1,3 @@
-var mensagem
-
-function pegaNumero() {
+function pegaNumero(mensagem) {
     return parseFloat(prompt(mensagem).replace(",", "."))
 }
