@@ -1,0 +1,47 @@
+<meta charset="utf-8">
+
+<h1>Uber vs Carro</h1>
+
+<script src="https://drive.google.com/file/d/1Z7X0FgYBDGbnyuBlFo4nPKxljOfHxtd3/view?usp=sharing" ></script>
+
+<h2>Uber</h2>
+
+<script>
+    mensagem = "Qual a distância que será percorrida?"
+    var distancia = pegaNumero()
+    
+    mensagem = "Qual a velocidade média do carro?"
+    var velocidadeMedia = pegaNumero()
+
+    var tempoEmHoras = distancia / velocidadeMedia
+    var tempoEmMinutos = tempoEmHoras * 60
+    var totalUber = 2 + distancia * 1.4 + tempoEmMinutos * 0.26
+
+    document.write(`
+        Total: R$ ${totalUber.toFixed(2).replace(".", ",")}
+    `)
+</script>
+
+<br>
+<h2>Carro</h2>
+<script>
+    mensagem = "Quantos km seu carro faz por litro?"
+    var autonomia = pegaNumero()
+    
+    mensagem = "Qual o preço do litro da gasolina?"
+    var precoLitroGasolina = pegaNumero()
+    
+    mensagem = "Digite o quanto gastará com estacionamento"
+    var totalEstacionamento = pegaNumero()
+    
+    var totalGasolina = (distancia / autonomia) * precoLitroGasolina
+    var totalCarro = totalGasolina + totalEstacionamento
+    
+    document.write(`
+        Gasolina: R$ ${totalGasolina.toFixed(2).replace(".", ",")}
+        <br>
+        Estacionamento: R$ ${totalEstacionamento.toFixed(2).replace(".", ",")}
+        <br>
+        Total: R$ ${totalCarro.toFixed(2).replace(".", ",")}
+    `)
+</script>

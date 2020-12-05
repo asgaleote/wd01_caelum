@@ -1,0 +1,25 @@
+<script>
+
+    function pulaLinha () {
+        document.write("<hr>")
+    }
+
+    function extrairValor() {
+        var mensagem = parseFloat(prompt("Quantos reais tenho na carteira? (na função)").replace(",", "."))
+
+        return mensagem
+    }
+
+    document.write("Primeiro trecho")
+    pulaLinha()
+    document.write("Segundo trecho")
+    pulaLinha()
+    document.write("Terceiro trecho")
+
+    var valorCarteira = parseFloat(prompt("Quantos reais tenho na carteira?"))
+    var valorCarteira1 = extrairValor();
+
+    console.log("valorCarteira:" + valorCarteira)
+    console.log("valorCarteira1:" + valorCarteira1)
+
+</script>
